@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: karsajobs-frontend
+  labels:
+    app: frontend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      tier: frontend
+  template:
+    metadata:
+      labels:
+        app: microservices
+        tier: frontend
+    spec:
+      containers:
+      - name: server
+        image: ghcr.io/samsularipin77/karsajobs-ui:latest
+        ports:
+          - containerPort: 3000
+        resources:
+          requests:
+            cpu: 20m
+        env:
+          - name: PASSWORD
+            valueFrom:
+              secretKeyRef:
+                name: app-tier-secret
+                key: password

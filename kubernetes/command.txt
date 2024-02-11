@@ -1,0 +1,6 @@
+apply kubernetes/mongodb/mongo-namespace.yaml &&
+apply kubernetes/mongodb/mongo-secret.yaml -n mongo-ns &&
+apply kubernetes/mongodb/mongo-configmap.yaml -n mongo-ns &&
+apply kubernetes/mongodb/mongo-pv-pvc.yaml -n mongo-ns &&
+apply kubernetes/mongodb/mongo-service.yaml -n mongo-ns &&
+apply kubernetes/mongodb/mongo-statefulset.yaml -n mongo-ns
