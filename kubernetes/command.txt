@@ -1,6 +1,41 @@
 apply kubernetes/mongodb/mongo-namespace.yaml &&
-apply kubernetes/mongodb/mongo-secret.yaml -n mongo-ns &&
-apply kubernetes/mongodb/mongo-configmap.yaml -n mongo-ns &&
-apply kubernetes/mongodb/mongo-pv-pvc.yaml -n mongo-ns &&
-apply kubernetes/mongodb/mongo-service.yaml -n mongo-ns &&
-apply kubernetes/mongodb/mongo-statefulset.yaml -n mongo-ns
+
+apply kubernetes/mongodb/mongo-secret.yaml &&
+apply kubernetes/mongodb/mongo-configmap.yaml &&
+apply kubernetes/mongodb/mongo-pv-pvc.yaml &&
+apply kubernetes/mongodb/mongo-service.yaml &&
+apply kubernetes/mongodb/mongo-statefulset.yaml
+
+backend
+apply kubernetes/backend/karsajobs-service.yaml &&
+apply kubernetes/backend/karsajobs-deployment.yaml
+
+front end
+apply kubernetes/frontend/karsajobs-ui-service.yaml &&
+apply kubernetes/frontend/karsajobs-ui-deployment.yaml  
+
+minikube service karsajobs-service-ui -n mongo-ns
+
+Apakah databasenya sudah di deploy mas?
+pastikan urutan deploy ke kubernetesnya: 
+- database (statefulset)
+- backend (deploy ambil ipnya untuk env di frontend)
+- frontend 
+
+itu pakai windows kan mas? ambil IP backendnya untuk env frontend yang hasil tunnel dari backend mas , ini pasti berubah terus IPnya oleh karna itu stelah deploy db , backend dan ambil ip hasil tunnel backendnnya, masukin ke env frontend baru jdikan ke docker image (tapi jangan close dulu db dan backend yang sedang berjalan) setelah docker imagenya jdi upload ke github package/dockerhub baru deploy frontendnnya mas , semoga membantu.
+
+kubectl port-forward service/karsajobs-ui 8000:8000
+
+kubectl describe pods <nama-pods>.
+
+https://www.dicoding.com/academies/433/discussions/339403
+https://www.dicoding.com/academies/433/discussions/339573
+https://www.dicoding.com/academies/433/discussions/339603
+https://www.dicoding.com/academies/433/discussions/340223
+https://www.dicoding.com/academies/433/discussions/340823
+https://www.dicoding.com/academies/433/discussions/313068
+https://www.dicoding.com/academies/433/discussions/267665
+
+minikube service karsajobs-service-ui -n mongo-ns
+kubectl port-forward service/karsajobs-service-ui 8080:8080 -n mongo-ns
+kubectl describe node | grep -i address -A 1

@@ -4,39 +4,34 @@ metadata:
   name: karsajobs-backend
   labels:
     app: backend
-    tier: app
 spec:
   replicas: 1
   selector:
     matchLabels:
-      tier: app
+      app: backend
   template:
     metadata:
       labels:
         app: backend
-        tier: app
     spec:
       containers:
-      - name: kersajobs
-        image: ghcr.io/samsularipin77/karsajobs:latest
+      - name: karsajobs
+        image: samsularipin77/karsajobs:latest
         imagePullPolicy: Always
         ports:
           - containerPort: 8080
-        resources:
-          requests:
-            cpu: 20m
         env:
           - name: APP_PORT
             value: "8080"
           - name: MONGO_HOST
-            value: mongo-service
+            value: $(DB_MONGO_SERVICE_HOST)
           - name: MONGO_USER
             valueFrom:
               secretKeyRef:
-                name: mongo-secret
+                name: mongo-credentials
                 key: MONGO_ROOT_USERNAME
           - name: MONGO_PASS
             valueFrom:
               secretKeyRef:
-                name: mongo-secret
+                name: mongo-credentials
                 key: MONGO_ROOT_PASSWORD
