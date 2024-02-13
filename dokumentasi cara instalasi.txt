@@ -1,3 +1,7 @@
+fork
+https://github.com/SamsulAripin77/a433-microservices.git
+
+tahapan menjalankan project kubernetes:
 - jalankan kelompok manifest database, dengan command :
     apply kubernetes/mongodb/mongo-secret.yaml &&
     apply kubernetes/mongodb/mongo-configmap.yaml &&
