@@ -1,0 +1,16 @@
+- jalankan kelompok manifest database, dengan command :
+    apply kubernetes/mongodb/mongo-secret.yaml &&
+    apply kubernetes/mongodb/mongo-configmap.yaml &&
+    apply kubernetes/mongodb/mongo-pv-pvc.yaml &&
+    apply kubernetes/mongodb/mongo-service.yaml &&
+    apply kubernetes/mongodb/mongo-statefulset.yaml
+- jalankan kelompok manifest backend, dengan command :
+    apply kubernetes/backend/karsajobs-service.yaml &&
+    apply kubernetes/backend/karsajobs-deployment.yaml
+- ambil ip port service backend dengan command : minikube service karsajobs-service --url
+- pastekan nilai ip dan port ke file kersajobs-ui-deployment.yaml ke bagian value env : VUE_APP_BACKEND
+- jalankan kelompok manifest frontend, dengan command :
+    apply kubernetes/frontend/karsajobs-ui-service.yaml &&
+    apply kubernetes/frontend/karsajobs-ui-deployment.yaml  
+- ambil ip dan port front end dengan command : minikube service karsajobs-service-ui --url
+- ambil value url nya pastekna di browser, itulah ip frontend
