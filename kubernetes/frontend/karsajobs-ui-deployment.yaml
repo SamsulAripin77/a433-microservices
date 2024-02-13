@@ -16,10 +16,10 @@ spec:
     spec:
       containers:
       - name: karsajobs-ui
-        image: samsularipin77/karsajobs-ui:v1
+        image: samsularipin77/karsajobs-ui:v3
         imagePullPolicy: Always
         ports:
           - containerPort: 8000
         env:
           - name: VUE_APP_BACKEND
-            value: http://localhost:8080
+            value: http://192.168.49.2:30007
