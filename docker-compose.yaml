@@ -1,0 +1,40 @@
+version: "3.2"
+services:
+  rabbitmq:
+    image: rabbitmq:3.8-management-alpine
+    container_name: 'rabbitmq_container'
+    ports:
+        - 5672:5672
+        - 15672:15672
+    volumes:
+        - ~/.docker-conf/rabbitmq/data/:/var/lib/rabbitmq/
+        - ~/.docker-conf/rabbitmq/log/:/var/log/rabbitmq
+    networks:
+        - rabbitmq_network
+  order-service:
+    image: samsularipin77/order-service:v2
+    container_name: order-service
+    ports:
+      - 3000:3000
+    environment:
+      NODE_ENV: production
+      AMQP_URL: amqp://guest:guest@rabbitmq:5672 #
+    depends_on:
+      - rabbitmq
+    networks:
+      - rabbitmq_network
+  shipping-service:
+    image: samsularipin77/shipping-service:v2
+    container_name: shipping-service
+    ports:
+      - 3001:3001
+    environment:
+      NODE_ENV: production
+      AMQP_URL: amqp://guest:guest@rabbitmq:5672 # kombinasikan klo error pake ini AMQP_URL=amqp://rabbitmq:5672
+    depends_on:
+      - rabbitmq
+    networks:
+      - rabbitmq_network
+networks:
+  rabbitmq_network:
+    driver: bridge 
