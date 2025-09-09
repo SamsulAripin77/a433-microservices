@@ -1,36 +1,31 @@
-submission-pertama-item-db-1  | 2024-02-07T04:51:38.058+0000 I CONTROL  [initandlisten] MongoDB starting : pid=1 port=27017 dbpath=/data/db 64-bit host=d0331a8e7642
-submission-pertama-item-db-1   | 2024-02-07T04:51:38.058+0000 I CONTROL  [initandlisten] db version v3.6.23
-submission-pertama-item-db-1   | 2024-02-07T04:51:38.058+0000 I CONTROL  [initandlisten] git version: d352e6a4764659e0d0350ce77279de3c1f243e5c
-submission-pertama-item-db-1   | 2024-02-07T04:51:38.058+0000 I CONTROL  [initandlisten] OpenSSL version: OpenSSL 1.0.2g  1 Mar 2016
-submission-pertama-item-db-1   | 2024-02-07T04:51:38.058+0000 I CONTROL  [initandlisten] allocator: tcmalloc
-submission-pertama-item-db-1   | 2024-02-07T04:51:38.058+0000 I CONTROL  [initandlisten] modules: none
-submission-pertama-item-db-1   | 2024-02-07T04:51:38.058+0000 I CONTROL  [initandlisten] build environment:
-submission-pertama-item-db-1   | 2024-02-07T04:51:38.058+0000 I CONTROL  [initandlisten]     distmod: ubuntu1604
-submission-pertama-item-db-1   | 2024-02-07T04:51:38.058+0000 I CONTROL  [initandlisten]     distarch: x86_64
-submission-pertama-item-db-1   | 2024-02-07T04:51:38.058+0000 I CONTROL  [initandlisten]     target_arch: x86_64
-submission-pertama-item-db-1   | 2024-02-07T04:51:38.058+0000 I CONTROL  [initandlisten] options: { net: { bindIpAll: true } }
-submission-pertama-item-app-1  | 
-submission-pertama-item-app-1  | > docker-software-delivery@1.0.0 start /app
-submission-pertama-item-app-1  | > node ./bin/www
-submission-pertama-item-app-1  | 
-submission-pertama-item-app-1  | NODE_ENV: production
-submission-pertama-item-app-1  | Connected to database
-submission-pertama-item-db-1   | 2024-02-07T04:51:38.058+0000 I -        [initandlisten] Detected data files in /data/db created by the 'wiredTiger' storage engine, so setting the active storage engine to 'wiredTiger'.
-submission-pertama-item-db-1   | 2024-02-07T04:51:38.058+0000 I STORAGE  [initandlisten] 
-submission-pertama-item-db-1   | 2024-02-07T04:51:38.058+0000 I STORAGE  [initandlisten] ** WARNING: Using the XFS filesystem is strongly recommended with the WiredTiger storage engine
-submission-pertama-item-db-1   | 2024-02-07T04:51:38.058+0000 I STORAGE  [initandlisten] **          See http://dochub.mongodb.org/core/prodnotes-filesystem
-submission-pertama-item-db-1   | 2024-02-07T04:51:38.058+0000 I STORAGE  [initandlisten] wiredtiger_open config: create,cache_size=417M,cache_overflow=(file_max=0M),session_max=20000,eviction=(threads_min=4,threads_max=4),config_base=false,statistics=(fast),compatibility=(release="3.0",require_max="3.0"),log=(enabled=true,archive=true,path=journal,compressor=snappy),file_manager=(close_idle_time=100000),statistics_log=(wait=0),verbose=(recovery_progress),
-submission-pertama-item-db-1   | 2024-02-07T04:51:38.704+0000 I STORAGE  [initandlisten] WiredTiger message [1707281498:704791][1:0x7fc4bd9b5a40], txn-recover: Main recovery loop: starting at 2/6016
-submission-pertama-item-db-1   | 2024-02-07T04:51:38.795+0000 I STORAGE  [initandlisten] WiredTiger message [1707281498:795576][1:0x7fc4bd9b5a40], txn-recover: Recovering log 2 through 3
-submission-pertama-item-db-1   | 2024-02-07T04:51:38.859+0000 I STORAGE  [initandlisten] WiredTiger message [1707281498:859522][1:0x7fc4bd9b5a40], txn-recover: Recovering log 3 through 3
-submission-pertama-item-db-1   | 2024-02-07T04:51:38.905+0000 I STORAGE  [initandlisten] WiredTiger message [1707281498:905895][1:0x7fc4bd9b5a40], txn-recover: Set global recovery timestamp: 0
-submission-pertama-item-db-1   | 2024-02-07T04:51:38.923+0000 I CONTROL  [initandlisten] 
-submission-pertama-item-db-1   | 2024-02-07T04:51:38.923+0000 I CONTROL  [initandlisten] ** WARNING: Access control is not enabled for the database.
-submission-pertama-item-db-1   | 2024-02-07T04:51:38.923+0000 I CONTROL  [initandlisten] **          Read and write access to data and configuration is unrestricted.
-submission-pertama-item-db-1   | 2024-02-07T04:51:38.923+0000 I CONTROL  [initandlisten] 
-submission-pertama-item-db-1   | 2024-02-07T04:51:38.927+0000 I FTDC     [initandlisten] Initializing full-time diagnostic data capture with directory '/data/db/diagnostic.data'
-submission-pertama-item-db-1   | 2024-02-07T04:51:38.928+0000 I NETWORK  [initandlisten] listening via socket bound to 0.0.0.0
-submission-pertama-item-db-1   | 2024-02-07T04:51:38.928+0000 I NETWORK  [initandlisten] listening via socket bound to /tmp/mongodb-27017.sock
-submission-pertama-item-db-1   | 2024-02-07T04:51:38.928+0000 I NETWORK  [initandlisten] waiting for connections on port 27017
-submission-pertama-item-db-1   | 2024-02-07T04:51:39.065+0000 I NETWORK  [listener] connection accepted from 172.21.0.3:40150 #1 (1 connection now open)
-submission-pertama-item-db-1   | 2024-02-07T04:51:39.070+0000 I NETWORK  [conn1] received client metadata from 172.21.0.3:40150 conn1: { driver: { name: "nodejs", version: "2.2.36" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "5.10.124-linuxkit" }, platform: "Node.js v14.21.3, LE, mongodb-core: 2.1.20" }
+submission micro service pertama ./build_push_image.sh
+[+] Building 23.4s (10/10) FINISHED                                                                                                                                                                                                                       docker:desktop-linux
+ => [internal] load build definition from Dockerfile                                                                                                                                                                                                                      0.0s
+ => => transferring dockerfile: 275B                                                                                                                                                                                                                                      0.0s
+ => [internal] load metadata for docker.io/library/node:14-alpine                                                                                                                                                                                                         3.4s
+ => [auth] library/node:pull token for registry-1.docker.io                                                                                                                                                                                                               0.0s
+ => [internal] load .dockerignore                                                                                                                                                                                                                                         0.0s
+ => => transferring context: 2B                                                                                                                                                                                                                                           0.0s
+ => [1/4] FROM docker.io/library/node:14-alpine@sha256:434215b487a329c9e867202ff89e704d3a75e554822e07f3e0c0f9e606121b33                                                                                                                                                   3.8s
+ => => resolve docker.io/library/node:14-alpine@sha256:434215b487a329c9e867202ff89e704d3a75e554822e07f3e0c0f9e606121b33                                                                                                                                                   0.0s
+ => => sha256:686172e40c38722891b4004f55f6447548c8367968ac523a612591e0d92f9db3 447B / 447B                                                                                                                                                                                0.6s
+ => => sha256:4cf6a83c0e2af3c780abcda02cc33f9e812fdcb40b610ed1838281cc9ab94ec8 2.43MB / 2.43MB                                                                                                                                                                            1.0s
+ => => sha256:683339ce8d6b9be2ca150a8de67b895e20ea5594b91d3911c95b0b8fea3e314c 36.99MB / 36.99MB                                                                                                                                                                          3.2s
+ => => sha256:c41833b44d910632b415cd89a9cdaa4d62c9725dc56c99a7ddadafd6719960f9 3.26MB / 3.26MB                                                                                                                                                                            1.3s
+ => => extracting sha256:c41833b44d910632b415cd89a9cdaa4d62c9725dc56c99a7ddadafd6719960f9                                                                                                                                                                                 0.1s
+ => => extracting sha256:683339ce8d6b9be2ca150a8de67b895e20ea5594b91d3911c95b0b8fea3e314c                                                                                                                                                                                 0.5s
+ => => extracting sha256:4cf6a83c0e2af3c780abcda02cc33f9e812fdcb40b610ed1838281cc9ab94ec8                                                                                                                                                                                 0.0s
+ => => extracting sha256:686172e40c38722891b4004f55f6447548c8367968ac523a612591e0d92f9db3                                                                                                                                                                                 0.0s
+ => [internal] load build context                                                                                                                                                                                                                                         0.0s
+ => => transferring context: 667.06kB                                                                                                                                                                                                                                     0.0s
+ => [2/4] WORKDIR /app                                                                                                                                                                                                                                                    0.1s
+ => [3/4] COPY . .                                                                                                                                                                                                                                                        0.0s
+ => [4/4] RUN npm install --production --unsafe-perm && npm run build                                                                                                                                                                                                    15.1s
+ => exporting to image                                                                                                                                                                                                                                                    1.0s
+ => => exporting layers                                                                                                                                                                                                                                                   0.7s
+ => => exporting manifest sha256:f109219ab473e0353c6f28cb6ef6866c274ccd7ebf5c64326d64915793c1d5ee                                                                                                                                                                         0.0s
+ => => exporting config sha256:7054ed83b422055a3cb1c34ee6f2b58dbb85ed7cb836b272596b2d4a906b627a                                                                                                                                                                           0.0s
+ => => exporting attestation manifest sha256:65cd9c14b22284dcaf136a03274b113b964b4da973bc821f0904b009c74fc092                                                                                                                                                             0.0s
+ => => exporting manifest list sha256:3c4c2af0307f719056eab72de3363e93d24822d37663e206d481ad504b3e888f                                                                                                                                                                    0.0s
+ => => naming to docker.io/library/item-app:v1                                                                                                                                                                                                                            0.0s
+ => => unpacking to docker.io/library/item-app:v1           
