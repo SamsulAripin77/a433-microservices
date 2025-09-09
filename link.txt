@@ -2,4 +2,4 @@ link docker hub
 samsularipin77/item-app
 
 link github repo
-https://SamsulAripin77@bitbucket.org/SamsulAripin77/a433-microservices.git
+git@github.com:SamsulAripin77/a433-microservices-submission-pertama.git
