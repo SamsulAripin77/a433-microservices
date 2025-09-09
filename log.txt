@@ -1,0 +1,36 @@
+submission-pertama-item-db-1  | 2024-02-07T04:51:38.058+0000 I CONTROL  [initandlisten] MongoDB starting : pid=1 port=27017 dbpath=/data/db 64-bit host=d0331a8e7642
+submission-pertama-item-db-1   | 2024-02-07T04:51:38.058+0000 I CONTROL  [initandlisten] db version v3.6.23
+submission-pertama-item-db-1   | 2024-02-07T04:51:38.058+0000 I CONTROL  [initandlisten] git version: d352e6a4764659e0d0350ce77279de3c1f243e5c
+submission-pertama-item-db-1   | 2024-02-07T04:51:38.058+0000 I CONTROL  [initandlisten] OpenSSL version: OpenSSL 1.0.2g  1 Mar 2016
+submission-pertama-item-db-1   | 2024-02-07T04:51:38.058+0000 I CONTROL  [initandlisten] allocator: tcmalloc
+submission-pertama-item-db-1   | 2024-02-07T04:51:38.058+0000 I CONTROL  [initandlisten] modules: none
+submission-pertama-item-db-1   | 2024-02-07T04:51:38.058+0000 I CONTROL  [initandlisten] build environment:
+submission-pertama-item-db-1   | 2024-02-07T04:51:38.058+0000 I CONTROL  [initandlisten]     distmod: ubuntu1604
+submission-pertama-item-db-1   | 2024-02-07T04:51:38.058+0000 I CONTROL  [initandlisten]     distarch: x86_64
+submission-pertama-item-db-1   | 2024-02-07T04:51:38.058+0000 I CONTROL  [initandlisten]     target_arch: x86_64
+submission-pertama-item-db-1   | 2024-02-07T04:51:38.058+0000 I CONTROL  [initandlisten] options: { net: { bindIpAll: true } }
+submission-pertama-item-app-1  | 
+submission-pertama-item-app-1  | > docker-software-delivery@1.0.0 start /app
+submission-pertama-item-app-1  | > node ./bin/www
+submission-pertama-item-app-1  | 
+submission-pertama-item-app-1  | NODE_ENV: production
+submission-pertama-item-app-1  | Connected to database
+submission-pertama-item-db-1   | 2024-02-07T04:51:38.058+0000 I -        [initandlisten] Detected data files in /data/db created by the 'wiredTiger' storage engine, so setting the active storage engine to 'wiredTiger'.
+submission-pertama-item-db-1   | 2024-02-07T04:51:38.058+0000 I STORAGE  [initandlisten] 
+submission-pertama-item-db-1   | 2024-02-07T04:51:38.058+0000 I STORAGE  [initandlisten] ** WARNING: Using the XFS filesystem is strongly recommended with the WiredTiger storage engine
+submission-pertama-item-db-1   | 2024-02-07T04:51:38.058+0000 I STORAGE  [initandlisten] **          See http://dochub.mongodb.org/core/prodnotes-filesystem
+submission-pertama-item-db-1   | 2024-02-07T04:51:38.058+0000 I STORAGE  [initandlisten] wiredtiger_open config: create,cache_size=417M,cache_overflow=(file_max=0M),session_max=20000,eviction=(threads_min=4,threads_max=4),config_base=false,statistics=(fast),compatibility=(release="3.0",require_max="3.0"),log=(enabled=true,archive=true,path=journal,compressor=snappy),file_manager=(close_idle_time=100000),statistics_log=(wait=0),verbose=(recovery_progress),
+submission-pertama-item-db-1   | 2024-02-07T04:51:38.704+0000 I STORAGE  [initandlisten] WiredTiger message [1707281498:704791][1:0x7fc4bd9b5a40], txn-recover: Main recovery loop: starting at 2/6016
+submission-pertama-item-db-1   | 2024-02-07T04:51:38.795+0000 I STORAGE  [initandlisten] WiredTiger message [1707281498:795576][1:0x7fc4bd9b5a40], txn-recover: Recovering log 2 through 3
+submission-pertama-item-db-1   | 2024-02-07T04:51:38.859+0000 I STORAGE  [initandlisten] WiredTiger message [1707281498:859522][1:0x7fc4bd9b5a40], txn-recover: Recovering log 3 through 3
+submission-pertama-item-db-1   | 2024-02-07T04:51:38.905+0000 I STORAGE  [initandlisten] WiredTiger message [1707281498:905895][1:0x7fc4bd9b5a40], txn-recover: Set global recovery timestamp: 0
+submission-pertama-item-db-1   | 2024-02-07T04:51:38.923+0000 I CONTROL  [initandlisten] 
+submission-pertama-item-db-1   | 2024-02-07T04:51:38.923+0000 I CONTROL  [initandlisten] ** WARNING: Access control is not enabled for the database.
+submission-pertama-item-db-1   | 2024-02-07T04:51:38.923+0000 I CONTROL  [initandlisten] **          Read and write access to data and configuration is unrestricted.
+submission-pertama-item-db-1   | 2024-02-07T04:51:38.923+0000 I CONTROL  [initandlisten] 
+submission-pertama-item-db-1   | 2024-02-07T04:51:38.927+0000 I FTDC     [initandlisten] Initializing full-time diagnostic data capture with directory '/data/db/diagnostic.data'
+submission-pertama-item-db-1   | 2024-02-07T04:51:38.928+0000 I NETWORK  [initandlisten] listening via socket bound to 0.0.0.0
+submission-pertama-item-db-1   | 2024-02-07T04:51:38.928+0000 I NETWORK  [initandlisten] listening via socket bound to /tmp/mongodb-27017.sock
+submission-pertama-item-db-1   | 2024-02-07T04:51:38.928+0000 I NETWORK  [initandlisten] waiting for connections on port 27017
+submission-pertama-item-db-1   | 2024-02-07T04:51:39.065+0000 I NETWORK  [listener] connection accepted from 172.21.0.3:40150 #1 (1 connection now open)
+submission-pertama-item-db-1   | 2024-02-07T04:51:39.070+0000 I NETWORK  [conn1] received client metadata from 172.21.0.3:40150 conn1: { driver: { name: "nodejs", version: "2.2.36" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "5.10.124-linuxkit" }, platform: "Node.js v14.21.3, LE, mongodb-core: 2.1.20" }

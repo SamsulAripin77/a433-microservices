@@ -1,0 +1,20 @@
+version : "3.7"
+
+services:
+  item-db:
+    image: mongo:3 #gunakan image mongo db dari docker hub
+    volumes:
+      - app-db:/data/db #gunakan volume app-db yang di definisikandi bawah
+    restart: always
+  item-app:
+    image: samsularipin77/item-app:v1 #gunakan image dari docker hub
+    depends_on: # jalankan setelah item-db jalan
+      - item-db
+    ports:
+      - "80:8080" #service yang mengguakan port 80 di host harus dimatikan dulu seperti apache/nginx
+    restart: always
+volumes:
+  app-db: #definisi volume
+
+
+  # docker-compose up > log.txt 2>&1
