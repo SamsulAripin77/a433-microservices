@@ -1,5 +1,9 @@
-fork
+fork repo
 https://github.com/SamsulAripin77/a433-microservices.git
+
+lokasi file build ada di masing-masing project:
+submission-kedua/karsajobs/build_push_image_karsajobs.sh
+submission-kedua/karsajobs-ui/build_push_image_karsajobs_ui.sh
 
 tahapan menjalankan project kubernetes:
 - jalankan kelompok manifest database, dengan command :
