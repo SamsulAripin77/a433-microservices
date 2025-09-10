@@ -1,0 +1,5 @@
+link docker hub
+samsularipin77/item-app
+
+link github repo
+https://github.com/SamsulAripin77/a433-microservices-submission-pertama.git
