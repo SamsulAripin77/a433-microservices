@@ -2,4 +2,4 @@ BE: https://hub.docker.com/r/samsularipin77/karsajobs
 FE: https://hub.docker.com/r/samsularipin77/karsajobs-ui
 
 fork
-https://github.com/SamsulAripin77/a433-microservices-submission-pertama.git
+https://github.com/SamsulAripin77/a433-microservices.git
