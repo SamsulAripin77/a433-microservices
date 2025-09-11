@@ -4,35 +4,35 @@ services:
     image: rabbitmq:3.8-management-alpine
     container_name: 'rabbitmq_container'
     ports:
-        - 5672:5672
-        - 15672:15672
+      - 5672:5672  # apakah sudah benar map port nya disamakan
+      - 15672:15672
     volumes:
-        - ~/.docker-conf/rabbitmq/data/:/var/lib/rabbitmq/
-        - ~/.docker-conf/rabbitmq/log/:/var/log/rabbitmq
+      - ~/.docker-conf/rabbitmq/data/:/var/lib/rabbitmq/
+      - ~/.docker-conf/rabbitmq/log/:/var/log/rabbitmq
     networks:
-        - rabbitmq_network
+      - rabbitmq_network
   order-service:
-    image: samsularipin77/order-service:v2
+    image: samsularipin77/order-service:v4
     container_name: order-service
+    depends_on:
+      - rabbitmq
     ports:
       - 3000:3000
     environment:
-      NODE_ENV: production
-      AMQP_URL: amqp://guest:guest@rabbitmq:5672 #
-    depends_on:
-      - rabbitmq
+      PORT: 3000
+      AMQP_URL: amqp://rabbitmq:5672 # ini juga ngambil dari .env 
     networks:
       - rabbitmq_network
   shipping-service:
-    image: samsularipin77/shipping-service:v2
+    image: samsularipin77/shipping-service:v4
     container_name: shipping-service
+    depends_on:
+      - rabbitmq
     ports:
       - 3001:3001
     environment:
-      NODE_ENV: production
-      AMQP_URL: amqp://guest:guest@rabbitmq:5672 # kombinasikan klo error pake ini AMQP_URL=amqp://rabbitmq:5672
-    depends_on:
-      - rabbitmq
+      PORT: 3001  # apakah sudah benar 3001 ngambil dari file .env
+      AMQP_URL: amqp://rabbitmq:5672 # kombinasikan klo error pake ini AMQP_URL=amqp://rabbitmq:5672
     networks:
       - rabbitmq_network
 networks:
